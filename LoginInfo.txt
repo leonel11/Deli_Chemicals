@@ -1,0 +1,6 @@
+﻿Username		Password		(Role)
+
+admin			adminadmin		(Admin)
+bor				borbor			(Member)
+mendeleev		mendeleev		(Member)
+curie			curiecurie		(Member)

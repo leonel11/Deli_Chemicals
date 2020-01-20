@@ -1,0 +1,87 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="OpenChessTeamTournament.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="~/lab.png" type="image/x-icon"> 
+    <link rel="shortcut icon" href="~/Images/lab.png" type="image/x-icon">
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server" style="height: 800px">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h3 style="color: transparent">
+                    <br/>  
+                </h3>
+                <h1>
+                    Deli Chemicals
+                </h1>
+                <h3 style="font-style: italic; height: 30px; width: 358px;">
+                    Quickly. Qualitatively. Expensive.
+                </h3>
+                <h5 style="color: transparent; height: 14px;">
+                  <br/> 
+                </h5>
+            </div>
+            <div class="loginDisplay">
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server" 
+                            style="font-weight: bolder; font-size: medium;">Log In</a> ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Hello, <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
+                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Exit" LogoutPageUrl="~/"/> ]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass= "menu"
+                    EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Homepage"
+                            ToolTip="Back to Homepage"/>
+                        <asp:MenuItem Text="Goods" NavigateUrl="~/Goods.aspx" ToolTip="Goods"/>
+                        <asp:MenuItem Text="Private cabinet" ToolTip="Private cabinet">
+                            <asp:MenuItem Text="Existing deals" NavigateUrl="~/MembersPages/ExistingDeals.aspx"
+                            ToolTip="Existing deals"/>
+                            <asp:MenuItem Text="Make a deal" NavigateUrl="~/MembersPages/MakeOrder.aspx"
+                            ToolTip="Make a deal"/>
+                            <asp:MenuItem Text="Edit assortment" NavigateUrl="~/AdminPages/EditAssortment.aspx"
+                            ToolTip="Edit assortment"/>
+                            <asp:MenuItem Text="Complete deals" NavigateUrl="~/AdminPages/CompleteOrders.aspx"
+                            ToolTip="Complete unfinished deals"/>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Profile" Value="Profile" NavigateUrl="~/Profile.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="About" 
+                            ToolTip="About">
+                            <asp:MenuItem Text="About company" NavigateUrl="~/About.aspx"
+                            ToolTip="About company"/>
+                            <asp:MenuItem Text="Rules of deals" NavigateUrl="~/RulesDeals.aspx"
+                            ToolTip="Rules of deals"/>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Mendeleev's table" NavigateUrl="~/PeriodicSystem.aspx"
+                            ToolTip="Periodic system of chemical elements"/>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="footer">
+            <h3 align="center" 
+            style="color: #000000; font-size: 14px; font-family: Garamond;">
+            Designed by <a href="http://web-mastery.info/">web-mastery.info</a>  |  Created by student Leonid Ivanovsky, group IVT-41-SO, YarSU, Russia, 2014
+            </h3>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

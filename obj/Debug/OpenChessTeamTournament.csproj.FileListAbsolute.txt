@@ -1,0 +1,5 @@
+C:\Users\User\Documents\Visual Studio 2010\Projects\OpenChessTeamTournament\bin\OpenChessTeamTournament.dll
+C:\Users\User\Documents\Visual Studio 2010\Projects\OpenChessTeamTournament\bin\OpenChessTeamTournament.pdb
+C:\Users\User\Documents\Visual Studio 2010\Projects\OpenChessTeamTournament\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2010\Projects\OpenChessTeamTournament\obj\Debug\OpenChessTeamTournament.dll
+C:\Users\User\Documents\Visual Studio 2010\Projects\OpenChessTeamTournament\obj\Debug\OpenChessTeamTournament.pdb
